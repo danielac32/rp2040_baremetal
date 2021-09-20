@@ -1,0 +1,5 @@
+build/
+picobin.bin
+picobin.elf
+picobin.list
+picobin.uf2
