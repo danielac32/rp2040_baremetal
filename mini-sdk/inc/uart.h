@@ -11,19 +11,19 @@ void uart_deinit(uint id);
 #define UART_RX0_BUFFER_SIZE 64
 
 #define UART_RX0_BUFFER_MASK (UART_RX0_BUFFER_SIZE - 1)
-#define UART_FRAME_ERROR      0x0800             
-#define UART_OVERRUN_ERROR    0x0400            
-#define UART_BUFFER_OVERFLOW  0x0200           
-#define UART_NO_DATA          0x0100   
+#define UART_FRAME_ERROR 0x0800
+#define UART_OVERRUN_ERROR 0x0400
+#define UART_BUFFER_OVERFLOW 0x0200
+#define UART_NO_DATA 0x0100
 
-uint8_t UART_RxBuf[UART_RX0_BUFFER_SIZE];
+extern uint8_t UART_RxBuf[UART_RX0_BUFFER_SIZE];
 
-uint8_t UART_TxHead;
-uint8_t UART_TxTail;
-uint8_t UART_RxHead;
-uint8_t UART_RxTail;
-uint8_t UART_LastRxError;
+extern uint8_t UART_TxHead;
+extern uint8_t UART_TxTail;
+extern uint8_t UART_RxHead;
+extern uint8_t UART_RxTail;
+extern uint8_t UART_LastRxError;
 uint16_t uart0_available(void);
 uint16_t uart0_getc(void);
 void irq_uart0();
-uint8_t readBytes(char *buffer,uint8_t length);
+uint8_t readBytes(char *buffer, uint8_t length);
